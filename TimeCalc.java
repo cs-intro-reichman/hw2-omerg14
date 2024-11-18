@@ -21,6 +21,13 @@ public class TimeCalc {
     	    minutesStr = "" + newMinutes;
 	    }
 
-        System.out.println(newHours + ":" + minutesStr);
+        String hourStr;
+        if (newHours < 10) {
+            hourStr = "0" + newHours;
+        } else {
+            hourStr = "" + newHours;
+        }
+
+        System.out.println(hourStr + ":" + minutesStr);
     }
 }
