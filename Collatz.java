@@ -6,6 +6,12 @@ public class Collatz {
 		if ((mode.equals("v")) || (mode.equals("V"))) {
 			System.out.print(seed + " ");
 
+			if (seed == 1) {
+				seed = (seed * 3) + 1;
+				System.out.print(seed + " ");
+				numOfTimes++;
+			}
+			
 		while (seed != 1) {
 			if (seed % 2 == 0) {
 				seed = seed / 2;
