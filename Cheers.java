@@ -10,7 +10,7 @@ public class Cheers {
                                 if (special.indexOf(c1) != -1) { 
                                         System.out.println("Give me an " + c1 + ": " + c1 + "!");
                                 } else {
-                                                System.out.println("Give me a " + c1 + ": " + c1 + "!");
+                                                System.out.println("Give me a  " + c1 + ": " + c1 + "!");
                                         }     
                 }  
                         
