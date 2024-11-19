@@ -2,24 +2,28 @@ public class Collatz {
 	public static void main(String args[]) {
 	    int seed = Integer.parseInt(args[0]);
 		String mode = args[1];
-		int numOfTimes = 1;
-		if ((mode.equals("v")) || (mode.equals("V"))) {
-			System.out.print(seed + " ");
 
-			if (seed == 1) {
-				seed = (seed * 3) + 1;
-				System.out.print(seed + " ");
+		for (int i = 1; i <= seed; i++) {
+			int currentSeed = i;
+			int numOfTimes = 1;
+		
+		if ((mode.equals("v")) || (mode.equals("V"))) {
+			System.out.print(currentSeed + " ");
+
+			if (currentSeed == 1) {
+				currentSeed = (currentSeed * 3) + 1;
+				System.out.print(currentSeed + " ");
 				numOfTimes++;
 			}
-			
-		while (seed != 1) {
-			if (seed % 2 == 0) {
-				seed = seed / 2;
-				System.out.print(seed + " ");
+
+		while (currentSeed != 1) {
+			if (currentSeed % 2 == 0) {
+				currentSeed =  currentSeed / 2;
+				System.out.print(currentSeed + " ");
 				numOfTimes++;
 			} else {
-				seed = (seed * 3) + 1;
-				System.out.print(seed + " ");
+				currentSeed = (currentSeed * 3) + 1;
+				System.out.print(currentSeed + " ");
 				numOfTimes++;
 			}
 		} 
@@ -29,5 +33,6 @@ public class Collatz {
 		}  else if ((mode.equals("c")) || (mode.equals("C"))) {
 			System.out.println("Every one of the first " +  seed + " hailstone sequences reached 1.");
 		}
+	}
 	}
 }
